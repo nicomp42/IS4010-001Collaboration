@@ -12,7 +12,7 @@
 # Anything else that's relevant:
 
 #LengthofLastWord
-def lengthOfLastWord() -> int:
+def garreaa() -> int:
     """
     Returns the length of the last word in the given string 's'.
     """
