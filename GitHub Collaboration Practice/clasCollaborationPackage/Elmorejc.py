@@ -1,36 +1,30 @@
 #elmorejc.py
 
-'''
-Example 1:
+#main.py
+# Name: Jake Elmore
+# email: Elmorejc@mail.uc.edu
+# Assignment Number: Inclass4/2/2024
+# Due Date: 4/2/2024
+# Course/Section: IS 4010-001
+# Semester/Year: Spring 2024
+# Brief Description of the assignment: Solves pascal's triangle
+# Brief Description of what this module does Solve's pascal's triangle
+# Citations: 
+# Anything else that's relevant:
 
-Input: numRows = 5
-Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
-Example 2:
+def generate_pascals_triangle():
+    numRows = 5  # You can adjust this number as needed
+    
+    triangle = [[1]]
+    for i in range(1, numRows):
+        prev_row = triangle[i - 1]
+        new_row = [1]
+        for j in range(1, i):
+            new_row.append(prev_row[j - 1] + prev_row[j])
+        new_row.append(1)
+        triangle.append(new_row)
+    
+    return triangle
 
-Input: numRows = 1
-Output: [[1]]
- 
-
-Constraints:
-
-1 <= numRows <= 30
-'''
-
-class Solution:
-    def generate(self, numRows: int):
-        result = []
-        for i in range(numRows):
-            row = [1]  # Initialize each row with 1
-            for j in range(1, i):
-                # Calculate the middle elements based on the previous row
-                row.append(result[i - 1][j - 1] + result[i - 1][j])
-            if i > 0:
-                row.append(1)  # Add the last 1 to the row
-            result.append(row)
-        return result
-
-# Example usage:
-numRows = 7
-solution = Solution()
-output = solution.generate(numRows)
-print(output)
+# Test the function
+print(generate_pascals_triangle())
