@@ -1,34 +1,29 @@
 #hill4ju.py
 
-def hill4ju(roman):
-    roman_numerals = {
-        'I': 1,
-        'IV': 4,
-        'V': 5,
-        'IX': 9,
-        'X': 10,
-        'XL': 40,
-        'L': 50,
-        'XC': 90,
-        'C': 100,
-        'CD': 400,
-        'D': 500,
-        'CM': 900,
-        'M': 1000
-    }
-    
-    result = 0
-    i = 0
-    while i < len(roman):
-        if i + 1 < len(roman) and roman[i:i+2] in roman_numerals:
-            result += roman_numerals[roman[i:i+2]]
-            i += 2
-        else:
-            result += roman_numerals[roman[i]]
-            i += 1
-    
-    return result
+# Name: JaJuan Hill
+# email: hill4ju@mail.uc.edu
+# Assignment Number: ClassCollaboration 20240402
+# Due Date: 4/2/2024
+# Course/Section: IS 4010
+# Semester/Year: Spring 2024
+# Brief Description of the assignment:Collaborating on github
 
-roman_numeral = "XXIII"  # Replace with your desired Roman numeral
-integer_value = hill4ju(roman_numeral)
-print(f"The integer value of {roman_numeral} is {integer_value}")
+# Brief Description of what this module does: Creates a function with no parameters
+# Citations:
+# Anything else that's relevant:
+
+    
+def hill4ju():
+    """
+    Returns the number of '1' bits in the binary representation of a positive integer.
+    """
+    n = int(input("Enter a positive integer in binary format: "), 2)
+    count = 0
+    while n:
+        count += n & 1
+        n >>= 1
+    return count
+
+if __name__ == "__main__":
+    result = hill4ju()
+    print(f"Number of set bits: {result}")
