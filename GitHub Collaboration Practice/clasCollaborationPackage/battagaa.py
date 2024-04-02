@@ -1,6 +1,19 @@
+# Name: Alyssa Battaglia
+# email: battagaa@mail.uc.edu
+# Assignment Number: InClassCollaboration
+# Due Date: 04/02/2024
+# Course/Section: IS4010-001
+# Semester/Year: Spring 2024
+# Brief Description of the assignment: This module displays a function that takes letters and outputs the roman numeral number
+
 # battagaa.py
 
 def battagaa(s: str) -> int:
+    '''
+    Inputs a roman numeral letter and outputs a number
+    @param: s, a string of letters, either I, V, X, L, C, D, or M.
+    @return: result, the output number
+    '''
     roman_values = {
         'I': 1,
         'V': 5,
