@@ -1,4 +1,12 @@
 #marti6aj.py
+# Name: Andrew Martin
+# email: marti6aj@mail.uc.edu
+# Assignment Number: ClassColaborationPackage
+# Due Date: April 2nd, 2024
+# Course/Section: IS4010-001
+# Semester/Year: Spring 2024
+# Brief Description of the module: Create a function with no parameters to call a Roman Numeral and convert it into an integer value.
+
 
 def romanToInt() -> int:
     roman_numerals = {
