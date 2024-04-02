@@ -26,7 +26,11 @@ def hamming_weight(n: int) -> int:
         n >>= 1
     return count
 
-# Example usage
-n1 = 11
-print(f"Input: n = {n1}")
-print(f"Output: {hamming_weight(n1)}")
+def bit():
+    # Taking user input for the integer n
+    n = int(7)
+    # Calculating the Hamming weight and displaying the result
+    print(f"The Hamming weight of {n} is: {hamming_weight(n)}")
+
+if __name__ == "__main__":
+    bit()
