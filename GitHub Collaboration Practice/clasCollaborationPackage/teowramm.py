@@ -17,8 +17,8 @@ def teowramm():
     cleaned_s = ''.join(c.lower() for c in input_string if c.isalnum())
     return cleaned_s == cleaned_s[::-1]
 
-# Example usage:
-result = teowramm()
 
 if __name__ == "__main__":
+    # Example usage:
+    result = teowramm()
     print(f"Is the input string a valid palindrome? {result}")
