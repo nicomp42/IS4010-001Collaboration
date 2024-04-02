@@ -17,5 +17,6 @@ def walsh2ct():
     return len(words[-1])
 
     # Call the function
-    result = walsh2ct()
-    print(f"Length of the last word: {result}")
+    if __name__ == "__main__":
+        result = walsh2ct()
+        print(f"Length of the last word: {result}")
